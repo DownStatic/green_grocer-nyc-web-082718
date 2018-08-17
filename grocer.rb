@@ -13,7 +13,7 @@ def consolidate_cart(cart)
   cart.each do |hsh|
     hsh.each do |item|
       items.each_with_index do |it,index|
-        if item == it
+        if item.keys[0] == it
           counts[index] = counts[index] + 1
         end
       end
