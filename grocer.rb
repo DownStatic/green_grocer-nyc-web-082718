@@ -33,7 +33,6 @@ def apply_coupons(cart, coupons)
   
   coupons.each do |coupon|
     if cart.keys.include?(coupon[:item])
-      counter = 0
       while cart[coupon[:item]][:count] >= coupon[:num]
         cart[coupon[:item]][:count] = cart[coupon[:item]][:count] - coupon[:num]
         cart["#{coupon[:item]} W/COUPON"] = {
