@@ -22,6 +22,7 @@ def consolidate_cart(cart)
   
   consolidated_array.each_with_index do |hsh,index|
     consolidated[items[index]] = hsh[items[index]]
+    consolidated[items[index]][:count] = counts[index]
   end
   
   return consolidated
