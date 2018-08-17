@@ -21,7 +21,7 @@ def consolidate_cart(cart)
   consolidated_array = cart.uniq
   
   consolidated_array.each_with_index do |hsh,index|
-    consolidated[items[index]] = hsh[index][items[index]]
+    consolidated[items[index]] = hsh[items[index]]
   end
   
   return consolidated
